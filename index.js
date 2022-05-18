@@ -8,24 +8,54 @@ inquirer
     .prompt([
         {
             type: 'input',
+            message: 'What is your project called?',
+            name: 'title',
+        },
+        {
+            type: 'input',
             message: 'What is your name?',
-            name: 'Name',
+            name: 'author',
         },
         {
-            name: 'label',
+            type: 'input',
+            message: 'Please describe your project. You will be asked about installation, and usage later',
+            name: 'describe',
+        },
+        {
+            type: 'input',
+            message: 'How might a user install your project?',
+            name: 'install',
+        },
+        {
+            type: 'input',
+            message: 'How might someone use this?',
+            name: 'usage',
+        },
+        {
+            type: 'input',
+            message: 'What are your guidelines for contribution?',
+            name: 'contribution',
+        },
+        {
+            type: 'input',
+            message: 'How can a user test this?',
+            name: 'test',
+        },
+        {
             type: 'list',
-            message: "What is your age?",
-            choices: [23, 34, 66, 80]
+            message: 'What kind of license do you want?',
+            name: 'license',
+            choices: ['Class C', 'Class A', 'Class M', 'Drivers License']
         },
         {
             type: 'input',
-            message: 'What languages do you know?',
-            name: 'lang',
+            message: 'What is your github username?',
+            name: 'username',
         },
         {
             type: 'input',
-            message: 'What is your preferred method of communication?:',
-            name: 'communicate',
+            message: 'What is your email?',
+            name: 'email',
         },
     ])
     .then((response) => {
@@ -33,10 +63,36 @@ inquirer
 
         fs.writeFile('READGEN.md',
 
-        `Name:${response.Name}\n Age: ${response.label}\nLanguage: ${response.lang}\nMethod: ${response.communicate}\n`,
+            
+        
+        `# ${response.title}
+Author: ${response.author}
+
+
+
+## About
+
+Description: ${response.describe}\n
+Installation: ${response.install}\n
+Usage: ${response.usage}\n
+Contribution Guidlines: ${response.contribution}\n
+Test: ${response.test}\n
+
+## License
+${response.license}\n
+
+
+
+# Questions
+[https://github.com/${response.username}]
+Reach me by email at ${response.email}`,
 
             (err) =>
-                err ? console.error(err) : console.log('Commit logged!'))
+                err ? console.error(err) : console.log('Commit logged!'));
+
+                if (response.license=='Class C'){
+                    console.log("Badges, we don't need no stinkin badges")
+                }
     });
 
 // TODO: Create a function to write README file
