@@ -3,7 +3,8 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 // TODO: Create an array of questions for user input
 const questions = [];
-let badge = "Tacos"
+let copyBig = "Tacos"
+let badge = " "
 inquirer
     .prompt([
         {
@@ -65,8 +66,9 @@ inquirer
     ])
     .then((response) => {
         console.log(response)
+        badge = `![License](https://img.shields.io/badge/License-${response.license}-red)`
         if (response.license=='MIT'){
-            badge = `Copyright (c) [${response.year}] ${response.author}
+            copyBig = `Copyright (c) [${response.year}] ${response.author}
 
             Permission is hereby granted, free of charge, to any person obtaining a copy
             of this software and associated documentation files (the "Software"), to deal
@@ -85,6 +87,7 @@ inquirer
             LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
             OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
             SOFTWARE.`
+            
         }
 
         fs.writeFile('READGEN.md',
@@ -97,7 +100,7 @@ Author: ${response.author}\n
 ${response.license}\n
 
 ${badge}
-
+${copyBig}
 
 
 ## About
@@ -122,16 +125,11 @@ Reach me by email at ${response.email}`,
 
     });
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
 
 // TODO: Create a function to initialize app
 // function init() {}
 
 // Function call to initialize app
 // init();
-
-// How to grab response[1], if choices == 'other', + .prompt question. promptquestion = input. "What is your prefered method of communication?" give options, let other be one. input = template ` `
-// argv? To grab inputs from the user?
 
 
