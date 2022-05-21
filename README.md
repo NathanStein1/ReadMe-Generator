@@ -16,7 +16,14 @@ WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ```
 
-
+### Table of Contents
+**[Installation Instructions](#installation-instructions)**<br>
+**[Usage Instructions](#usage-instructions)**<br>
+**[Troubleshooting](#troubleshooting)**<br>
+**[Compatibility](#compatibility)**<br>
+**[Notes and Miscellaneous](#notes-and-miscellaneous)**<br>
+**[Building the Extension Bundles](#building-the-extension-bundles)**<br>
+**[Next Steps, Credits, Feedback, License](#next-steps)**<br>
 
 
 # {Title}
