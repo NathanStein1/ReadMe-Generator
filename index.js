@@ -1,10 +1,14 @@
-// TODO: Include packages needed for this application
+// Imports the packages required to run the program
 const inquirer = require('inquirer');
 const fs = require('fs');
-// TODO: Create an array of questions for user input
-const questions = [];
+
+// Creates variables that can be used for various inputs in the template below
+
+
 let copyBig = "Tacos"
 let badge = " "
+
+// We are using inquirer to run this. This allows us to ask the user questions are record their input via node
 inquirer
     .prompt([
         {
@@ -64,6 +68,7 @@ inquirer
             name: 'email',
         },
     ])
+    // We promise there is a response, then once we get it, we can use that information to create a unique readme. Below are some if statements to change the license infomation
     .then((response) => {
         console.log(response)
         badge = `![License](https://img.shields.io/badge/License-${response.license}-red)\n`
@@ -977,7 +982,7 @@ the "copyright" line and a pointer to where the full notice is found.
             USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.`
 
         }
-
+// We are using the file system to create a new file that will contain all the information we need
         fs.writeFile('READGEN.md',
 
 
@@ -1036,14 +1041,3 @@ Reach me by email at ${response.email}`,
 
 
     });
-
-
-// TODO: Create a function to initialize app
-// function init() {}
-
-
-
-// Function call to initialize app
-// init();
-
-

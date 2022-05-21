@@ -1,68 +1,17 @@
-```md
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-WHEN I enter my project title
-THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
-```
+# Read Me Generator
 
-### Table of Contents
-**[Installation Instructions](#installation-instructions)**<br>
-**[Usage Instructions](#usage-instructions)**<br>
-**[Troubleshooting](#troubleshooting)**<br>
-**[Compatibility](#compatibility)**<br>
-**[Notes and Miscellaneous](#notes-and-miscellaneous)**<br>
-**[Building the Extension Bundles](#building-the-extension-bundles)**<br>
-**[Next Steps, Credits, Feedback, License](#next-steps)**<br>
+## Author: Nathan Stein
 
+## Description
 
-# {Title}
-
-
-Author: {Author}
+This is a ReadMe generator application that uses node to create a readme.md based off of the users input in an integrated terminal. Please watch the video below to see it in action!
 
 
 
-## About
+## Questions
 
-{Describe}
-{Install}
-{Usage}
-{Contributors}
-{Tests}
-
-## License
-{License}
+[https://github.com/NathanStein1]
 
 
-
-# Questions
-[https://github.com/{Username}]
-Reach me by email at {Email}
-
-
-
-
-
-
-
-
-        <!-- {
-            name: 'label',
-            type: 'list',
-            message: "What is your age?",
-            choices: [23, 34, 66, 80]
-
-
-            Name:${response.title}\n Age: ${response.label}\nLanguage: ${response.lang}\nMethod: ${response.communicate}\n
-        }, -->
+###### You may have to download this to make sure it is not blurry :p
+https://drive.google.com/file/d/1Oq-o5Yj5t89tZsDy6dJKVFZslVGGvTXv/view
